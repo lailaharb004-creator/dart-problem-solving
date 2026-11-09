@@ -1,0 +1,37 @@
+import 'dart:io' show stdin;
+
+void main(){
+//////////////////////////////////////////////////////////////////////////////////////
+///Age checker 
+/////////////////////////////////////////////////////////////////////////////////////
+  print("Please Enter Your Age ");
+  String input=stdin.readLineSync() ?? "" .trim();
+  int ? age=int.tryParse(input);
+  while(age==null || age<0){
+    print("Please Enter A valid Age");
+    input=stdin.readLineSync() ?? "" .trim();
+    age=int.tryParse(input);
+  }
+  if(age <=12){
+    print("child");
+  }
+  else if( age<=17){
+    print("Teenager");
+  }
+  else{
+    print("Adult");
+  }
+////////////////////////////////////////////////////////////////////////////
+////test cases 
+///""
+///+ 
+///laila
+///-13
+///2
+///13
+///18
+///15
+///25
+///24  with space
+////////////////////////////////////////////////////////////////////////////
+}
